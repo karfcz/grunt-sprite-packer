@@ -1,0 +1,46 @@
+{
+  "name": "grunt-sprite-packer",
+  "description": "Sprite packer converts multiple png files into single sprite file using efficient bin packer algorithm. Metadata (names, dimensions and positions of individual sprites) are written into separate template-based text file.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/karfcz/grunt-sprite-packer",
+  "author": {
+    "name": "Karel Fučík",
+    "email": "karf@karf.cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/karfcz/grunt-sprite-packer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/karfcz/grunt-sprite-packer/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/karfcz/grunt-sprite-packer/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "handlebars": "~1.0.12",
+    "node-imagemagick": "~0.1.8"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
