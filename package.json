@@ -1,7 +1,7 @@
 {
   "name": "grunt-sprite-packer",
-  "description": "Sprite packer converts multiple png files into single sprite file using efficient bin packer algorithm. Metadata (names, dimensions and positions of individual sprites) are written into separate template-based text file.",
-  "version": "0.1.0",
+  "description": "Sprite packer converts multiple png files into single sprite file using efficient bin packer algorithm.",
+  "version": "0.1.1",
   "homepage": "https://github.com/karfcz/grunt-sprite-packer",
   "author": {
     "name": "Karel Fučík",
