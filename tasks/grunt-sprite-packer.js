@@ -15,6 +15,10 @@ module.exports = function(grunt) {
 	{
 		var files = this.files;
 		if(!(files instanceof Array)) files = [files];
+		if(files.length && files[0].src == ''){
+			grunt.log.error('No sprites');
+			return;
+		}
 
 		var done = this.async();
 		var counter = files.length;
