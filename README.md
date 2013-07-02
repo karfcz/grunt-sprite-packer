@@ -30,18 +30,20 @@ In your project's Gruntfile, add a section named `spritepacker` to the data obje
 ```js
 grunt.initConfig({
   spritepacker: {
-    options: {
-      // Path to the template for generating metafile:
-      template: 'css/sprites.css.tpl',
+    default_options: {
+      options: {
+        // Path to the template for generating metafile:
+        template: 'css/sprites.css.tpl',
 
-      // Destination metafile:
-      destCss: 'css/sprites.css',
+        // Destination metafile:
+        destCss: 'css/sprites.css',
 
-      // Base URL for sprite image, used in template
-      baseUrl: '../img/'
-    },
-    files: {
-      'img/sprites.png': ['img/sprites/*.png']
+        // Base URL for sprite image, used in template
+        baseUrl: '../img/'
+      },
+      files: {
+        'img/sprites.png': ['img/sprites/*.png']
+      }
     }
   }
 })

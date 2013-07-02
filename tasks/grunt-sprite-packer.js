@@ -2,50 +2,57 @@
  * grunt-sprite-packer
  * https://github.com/karfcz/grunt-sprite-packer
  *
- * Copyright (c) 2013 Karel Fučíkk
+ * Copyright (c) 2013 Karel Fučík
  * Licensed under the MIT license.
  */
 
-// var name = require.resolve('../lib/sprite-packer.js');
-// delete require.cache[name];
+var name = require.resolve('../lib/sprite-packer.js');
+delete require.cache[name];
 
 module.exports = function(grunt) {
 
 	var spritePackerTask = function()
 	{
-		var files = this.files;
-		if(!(files instanceof Array)) files = [files];
-		if(files.length && files[0].src == ''){
-			grunt.log.error('No sprites');
-			return;
-		}
+		var SpritePacker = require('../lib/sprite-packer.js').SpritePacker,
+			spritePacker,
+			files = this.files,
+			options = this.options({
+				template: null,
+				destCss: null,
+				baseUrl: null,
+				name: null,
+				log: grunt.log.ok
+			}),
+			done = this.async(),
+			counter = files.length;
 
-		var done = this.async();
-		var counter = files.length;
-		var donePart = function(){
+		var donePart = function()
+		{
 			counter--;
 			if(counter === 0) done();
 		};
-		var SpritePacker = require('../lib/sprite-packer.js').SpritePacker;
-		var options;
 
 		for(var i = 0, l = counter; i < l; i++)
 		{
-			options = {
-				files: grunt.file.expand( files[i].src ),
-				outfile: files[i].dest,
-				templateFile: this.data.options.template || this.data.template || null,
-				outCss: this.data.options.destCss || this.data.destCss || null
-			};
-
-			if(this.data.options)
+			if(files[i].src.length === 0){
+				grunt.log.ok('No sprites for destination ' + files[i].dest);
+				donePart();
+			}
+			else
 			{
-				options.name = this.data.options.name || null;
-				options.baseUrl = this.data.options.baseUrl || null;
+				spritePacker = new SpritePacker(
+				{
+					files: files[i].src,
+					outfile: files[i].dest,
+					template: options.template,
+					destCss: options.destCss,
+					baseUrl: options.baseUrl,
+					name: options.name,
+					log: grunt.log.ok
+				});
+				spritePacker.run(donePart);
 			}
 
-			var spritePacker = new SpritePacker(options);
-			spritePacker.run(donePart);
 		}
 	};
 
