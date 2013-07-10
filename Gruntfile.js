@@ -34,7 +34,8 @@ module.exports = function(grunt) {
 				options: {
 					template: 'test/fixtures/sprites.css.tpl',
 					destCss: 'tmp/sprites.css',
-					baseUrl: '../img/'
+					baseUrl: '../img/',
+					padding: 2
 				},
 				files: {
 					'tmp/sprites.png': ['test/fixtures/img/*.png']

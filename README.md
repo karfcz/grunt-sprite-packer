@@ -99,6 +99,12 @@ Type: `String`
 
 URL path to the generated sprite file.
 
+#### options.padding
+Type: `Number`
+Default: 0
+
+White space that will be added as a padding around every sprite (in px). It is useful to prevent bleeding pixels from one sprite to another when scaled / interpolated in the browser.
+
 ## Credits
 
 This plugin uses binary tree bin packer algorithm by Jake Gordon (<https://github.com/jakesgordon/bin-packing/>).

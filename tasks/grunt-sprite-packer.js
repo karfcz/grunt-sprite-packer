@@ -21,6 +21,7 @@ module.exports = function(grunt) {
 				destCss: null,
 				baseUrl: null,
 				name: null,
+				padding: 0,
 				log: grunt.log.ok
 			}),
 			done = this.async(),
@@ -48,6 +49,7 @@ module.exports = function(grunt) {
 					destCss: options.destCss,
 					baseUrl: options.baseUrl,
 					name: options.name,
+					padding: options.padding,
 					log: grunt.log.ok
 				});
 				spritePacker.run(donePart);
