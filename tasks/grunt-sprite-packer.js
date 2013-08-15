@@ -50,6 +50,7 @@ module.exports = function(grunt) {
 					baseUrl: options.baseUrl,
 					name: options.name,
 					padding: options.padding,
+					evenPixels: options.evenPixels || false,
 					log: grunt.log.ok
 				});
 				spritePacker.run(donePart);
