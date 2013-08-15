@@ -105,6 +105,30 @@ Default: 0
 
 White space that will be added as a padding around every sprite (in px). It is useful to prevent bleeding pixels from one sprite to another when scaled / interpolated in the browser.
 
+#### options.format
+Type: `String`
+Default: 'png32'
+
+Output file format. Any image format supported by ImageMagick should work (tested 'png32' and 'jpg').
+
+#### options.background
+Type: `String`
+Default: 'none'
+
+Background color of output image. 'none' = transparent, '#ffffff' = red etc.
+
+#### options.quality
+Type: `Number`
+Default: '100%'
+
+Compression quality of output file. Has no effect for file formats other than jpg.
+
+#### options.evenPixels
+Type: `Boolean`
+Default: `false`
+
+When set to `true`, dimensions of sprites will be aligned to even pixels (useful when scaled down by factor of 2 in CSS for mobile/retina/nonretina optimization). Note that padding must be set to (multiple of) 2 as well.
+
 ## Credits
 
 This plugin uses binary tree bin packer algorithm by Jake Gordon (<https://github.com/jakesgordon/bin-packing/>).

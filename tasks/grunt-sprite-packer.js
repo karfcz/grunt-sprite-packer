@@ -22,6 +22,10 @@ module.exports = function(grunt) {
 				baseUrl: null,
 				name: null,
 				padding: 0,
+				background: 'none',
+				format: 'png32',
+				quality: '100%',
+				evenPixels: false,
 				log: grunt.log.ok
 			}),
 			done = this.async(),
@@ -50,7 +54,10 @@ module.exports = function(grunt) {
 					baseUrl: options.baseUrl,
 					name: options.name,
 					padding: options.padding,
-					evenPixels: options.evenPixels || false,
+					evenPixels: options.evenPixels,
+					format: options.format,
+					quality: options.quality,
+					background: options.background,
 					log: grunt.log.ok
 				});
 				spritePacker.run(donePart);
