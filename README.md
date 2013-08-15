@@ -101,25 +101,25 @@ URL path to the generated sprite file.
 
 #### options.padding
 Type: `Number`
-Default: 0
+Default: `0`
 
 White space that will be added as a padding around every sprite (in px). It is useful to prevent bleeding pixels from one sprite to another when scaled / interpolated in the browser.
 
 #### options.format
 Type: `String`
-Default: 'png32'
+Default: `'png32'`
 
-Output file format. Any image format supported by ImageMagick should work (tested 'png32' and 'jpg').
+Output file format. Any image format supported by ImageMagick should work (tested `'png32'` and `'jpg'`).
 
 #### options.background
 Type: `String`
 Default: 'none'
 
-Background color of output image. 'none' = transparent, '#ffffff' = red etc.
+Background color of output image. `'none'` = transparent, `'#ffffff'` = white, `'#ff0000'` = red etc.
 
 #### options.quality
-Type: `Number`
-Default: '100%'
+Type: `String`
+Default: `'100%'`
 
 Compression quality of output file. Has no effect for file formats other than jpg.
 
