@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 				template: null,
 				destCss: null,
 				baseUrl: null,
-				prefix: 'sprite',
+				prefix: null,
 				name: null,
 				padding: 0,
 				background: 'none',
