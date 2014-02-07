@@ -62,6 +62,6 @@ module.exports = function (grunt) {
     }
   };
 
-  grunt.registerMultiTask('spritepacker', 'Converts multiple png images into one sprite image + generates text file with coords data through a handlebars template (typically Stylus/SASS/LESS or plain CSS)', spritePackerTask);
-  grunt.registerMultiTask('spritePacker', 'Converts multiple png images into one sprite image + generates text file with coords data through a handlebars template (typically Stylus/SASS/LESS or plain CSS)', spritePackerTask);
+  grunt.registerMultiTask('spritepacker-ext', 'Converts multiple png images into one sprite image + generates text file with coords data through a handlebars template (typically Stylus/SASS/LESS or plain CSS)', spritePackerTask);
+  grunt.registerMultiTask('spritePacker-ext', 'Converts multiple png images into one sprite image + generates text file with coords data through a handlebars template (typically Stylus/SASS/LESS or plain CSS)', spritePackerTask);
 };

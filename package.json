@@ -1,5 +1,5 @@
 {
-  "name": "grunt-sprite-packer",
+  "name": "grunt-sprite-packer-ext",
   "description": "Sprite packer converts multiple png files into single sprite file using efficient bin packer algorithm.",
   "version": "0.1.6",
   "homepage": "https://github.com/sunpietro/grunt-sprite-packer",
