@@ -38,7 +38,7 @@ module.exports = function (grunt) {
 
     for (var i = 0, l = counter; i < l; i++) {
 
-      if (files[i].src.length === 0){
+      if (files[i].src.length === 0) {
         grunt.log.ok('No sprites for destination ' + files[i].dest);
         donePart();
       } else {
@@ -54,6 +54,7 @@ module.exports = function (grunt) {
           format      : options.format,
           quality     : options.quality,
           background  : options.background,
+          cssConfig   : grunt.file.readJSON(options.cssConfig),
           log         : grunt.log.ok
         });
         spritePacker.run(donePart);
