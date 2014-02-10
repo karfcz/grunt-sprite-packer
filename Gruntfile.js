@@ -12,9 +12,9 @@ module.exports = function (grunt) {
     },
 
     // Before generating any new files, remove any previously-created files.
-    // clean : {
-    //   tests : ['tmp'],
-    // },
+    clean : {
+      tests : ['tmp/**/*.*'],
+    },
 
     // Configuration to be run (and then tested).
     'spritepacker-ext' : {
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
           cssConfig : 'files/sprite.json'
         },
         files: {
-          'tmp/sprites.png' : ['files/images/sprites/*.png']
+          'tmp/sprites.png' : ['files/images/sprites/**/*.png']
         }
       }
     },
@@ -49,9 +49,9 @@ module.exports = function (grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['spritepacker-ext', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'spritepacker-ext']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['spritepacker-ext']);
+  grunt.registerTask('default', ['test']);
 
 };
