@@ -19,7 +19,7 @@ grunt.loadNpmTasks('grunt-sprite-packer-ext');
 
 ImageMagick library have to be installed in your system. See [www.imagemagick.org](http://www.imagemagick.org) for installation instructions.
 
-## The "spritepacker" task
+## The "spritepacker-ext" task
 
 ### Overview
 
@@ -29,7 +29,7 @@ In your project's Gruntfile, add a section named `spritepacker` to the data obje
 
 ```js
 grunt.initConfig({
-  spritepacker: {
+  'spritepacker-ext': {
     default_options: {
       options: {
         // Path to the template for generating metafile:
