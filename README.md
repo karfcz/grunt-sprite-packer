@@ -61,8 +61,8 @@ A path to the template for generating metafile. Template is processed through Ha
 * `fileName` - file name of generated sprite file (i.e. task destination)
 * `width` - width of generated sprite file
 * `height` - height of generated sprite file
-* `timestamp` - timestamp (can be used in template as image url parameter to prevent caching issues)
-* `checksum` - md5 hash (can be used in template as image url parameter to prevent caching issues)
+* `timestamp` - timestamp (can be used in template as image url parameter to prevent caching issues) - deprecated, use checksum instead
+* `checksum` - md5 hash of the generated sprite image file (can be used in template as image url parameter to prevent caching issues)
 
 Each item in sprites array contains the following properties:
 
