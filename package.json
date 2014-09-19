@@ -29,7 +29,8 @@
   },
   "dependencies": {
     "handlebars": "~1.0.12",
-    "node-imagemagick": "~0.1.8"
+    "node-imagemagick": "~0.1.8",
+    "xmldoc": "^0.1.2"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.1.1",

@@ -26,6 +26,7 @@ module.exports = function(grunt) {
 				format: 'png32',
 				quality: '100%',
 				evenPixels: false,
+				svg: false,
 				log: grunt.log.ok
 			}),
 			done = this.async(),
@@ -58,6 +59,7 @@ module.exports = function(grunt) {
 					format: options.format,
 					quality: options.quality,
 					background: options.background,
+					svg: options.svg,
 					log: grunt.log.ok
 				});
 				spritePacker.run(donePart);
@@ -66,6 +68,7 @@ module.exports = function(grunt) {
 		}
 	};
 
+	grunt.registerMultiTask('spritepackersvg', 'Converts multiple png images into one sprite image + generates text file with coords data through a handlebars template (typically Stylus/SASS/LESS or plain CSS)', spritePackerTask);
 	grunt.registerMultiTask('spritepacker', 'Converts multiple png images into one sprite image + generates text file with coords data through a handlebars template (typically Stylus/SASS/LESS or plain CSS)', spritePackerTask);
 	grunt.registerMultiTask('spritePacker', 'Converts multiple png images into one sprite image + generates text file with coords data through a handlebars template (typically Stylus/SASS/LESS or plain CSS)', spritePackerTask);
 

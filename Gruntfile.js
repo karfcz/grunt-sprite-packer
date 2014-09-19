@@ -40,8 +40,29 @@ module.exports = function(grunt) {
 				files: {
 					'tmp/sprites.png': ['test/fixtures/img/*.png']
 				}
+			},
+			svg: {
+				options: {
+					template: 'test/fixtures/sprites.css.tpl',
+					destCss: 'tmp/sprites-svg.css',
+					baseUrl: '../img/',
+					padding: 2,
+					svg: true
+				},
+				files: {
+					'tmp/sprites.svg': ['test/fixtures/svg/*.svg']
+				}
 			}
 		},
+
+		// svg2png: {
+		//     fallback: {
+		//     	options: {},
+		//      	files: [{
+		// 	        src: ["tmp/sprites.svg"]
+		// 	    }]
+		//     }
+		// },
 
 		// Unit tests.
 		nodeunit: {
@@ -57,10 +78,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-nodeunit');
+	// grunt.loadNpmTasks('grunt-svg2png');
 
 	// Whenever the "test" task is run, first clean the "tmp" dir, then run this
 	// plugin's task(s), then test the result.
-	grunt.registerTask('test', ['clean', 'spritepacker', 'nodeunit']);
+	grunt.registerTask('test', ['spritepacker', 'nodeunit']);
 
 	// By default, lint and run all tests.
 	grunt.registerTask('default', ['spritepacker']);
