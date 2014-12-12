@@ -77,7 +77,7 @@ Each item in sprites array contains the following properties:
 Example of template file for generating simple CSS:
 
 ```
-{{#sprites}}.{{name}} = { background: url('{{../baseUrl}}{{../fileName}}') no-repeat -{{x}}px -{{y}}px; width: {{width}}px; height: {{height}}px; }
+{{#sprites}}.{{name}} { background: url('{{../baseUrl}}{{../fileName}}') no-repeat -{{x}}px -{{y}}px; width: {{width}}px; height: {{height}}px; }
 {{/sprites}}
 ```
 
